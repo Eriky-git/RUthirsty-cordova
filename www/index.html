@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <title>RUthirsty - 喝水打卡</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <div class="app">
+        <!-- 头部 -->
+        <header class="header">
+            <h1>💧 RUthirsty</h1>
+            <p class="subtitle">记录每一次饮水</p>
+        </header>
+
+        <!-- 今日统计 -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number" id="todayCount">0</div>
+                <div class="stat-label">今日喝水次数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="todayVolume">0</div>
+                <div class="stat-label">今日饮水量 (ml)</div>
+            </div>
+        </div>
+
+        <!-- 打卡按钮 -->
+        <div class="checkin-container">
+            <button id="checkinBtn" class="checkin-btn">
+                <span class="btn-icon">💧</span>
+                <span class="btn-text">喝水打卡</span>
+            </button>
+            <div class="volume-selector">
+                <label>本次饮水量：</label>
+                <select id="volumeSelect">
+                    <option value="200">200ml</option>
+                    <option value="250" selected>250ml</option>
+                    <option value="300">300ml</option>
+                    <option value="500">500ml</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 记录列表 -->
+        <div class="records-container">
+            <div class="records-header">
+                <h2>打卡记录</h2>
+                <button id="clearBtn" class="clear-btn">清空记录</button>
+            </div>
+            <div id="recordsList" class="records-list">
+                <!-- 记录将动态插入这里 -->
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
